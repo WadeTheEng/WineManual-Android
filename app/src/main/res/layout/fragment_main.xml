@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.viewpagerindicator.TabPageIndicator
+            android:id="@+id/main_tabs"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:background="@drawable/ab_solid_winehound" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/main_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+
+    <au.net.winehound.ui.views.SearchControlsView_
+        android:id="@+id/main_search_controls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+</FrameLayout>

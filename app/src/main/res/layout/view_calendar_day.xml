@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+	    android:layout_width="match_parent"
+	    android:layout_height="48sp"
+	    android:minHeight="48sp"
+	    android:padding="2sp"
+        android:background="?android:attr/selectableItemBackground">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pawprint"
+        android:layout_gravity="center"
+        android:id="@+id/calendar_day_selection"
+        />
+
+    <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:textSize="15sp"
+        android:layout_marginTop="@dimen/padding_small"
+	   	android:layout_gravity="center"
+	   	android:gravity="center"
+	   	android:id="@+id/calendar_day_text"
+        tools:text="28">
+	</au.net.winehound.ui.views.edmondsans.EdmondSansTextView>
+
+    <View
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:background="@drawable/day_with_event"
+        android:layout_gravity="center_horizontal|bottom"
+        android:id="@+id/calendar_day_event"
+        />
+</FrameLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/coverflow_wine_width"
+    android:layout_height="@dimen/coverflow_wine_height">
+
+    <ImageView
+        android:id="@+id/wine_coverflow_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"
+        android:src="@drawable/wine_bottle_dotted"/>
+
+</FrameLayout>

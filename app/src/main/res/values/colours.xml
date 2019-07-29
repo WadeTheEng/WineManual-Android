@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="winehound_cream">#F2F0EB</color>
+    <color name="winehound_cream_transparent">#88F2F0EB</color>
+    <color name="winehound_cream_transparent_heavy">#DDF2F0EB</color>
+    <color name="winehound_cream_transparent_very_heavy">#F0F2F0EB</color>
+
+
+    <color name="winehound_red">#8C183B</color>
+    <color name="winehound_red_transparent">#888C183B</color>
+
+    <color name="winehound_grey">#454545</color>
+    <color name="winehound_grey_transparent">#88454545</color>
+
+    <color name="white">#FFF</color>
+    <color name="white_transparent">#8FFF</color>
+    <color name="black">#000</color>
+    <color name="black_transparent">#7000</color>
+
+</resources>

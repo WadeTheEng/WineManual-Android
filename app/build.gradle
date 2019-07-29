@@ -1,0 +1,102 @@
+apply plugin: 'android'
+//apply plugin: 'android-apt'
+
+repositories {
+    mavenCentral()
+}
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+
+    defaultConfig {
+        minSdkVersion 28
+        targetSdkVersion 28
+        versionCode 5
+        versionName "1.0"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("winehound-release-key.keystore")
+            storePassword "winehound"
+            keyAlias "winehound"
+            keyPassword "winehound"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            java.srcDirs = ['src/main/java', 'GENERATED_FOLDER']
+            resources.srcDirs = ['src/main/resources']
+            res.srcDirs = ['src/main/res']
+            assets.srcDirs = ['src/main/assets']
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+    }
+}
+
+
+
+def AAVersion = '3.0.1'
+
+dependencies {
+    implementation 'com.github.Hackforid:FancyCoverFlow:1.0'
+
+
+    implementation 'com.android.support:support-v4:28.0.0'
+
+    implementation 'com.squareup.picasso:picasso:2.2.0'
+
+    implementation 'com.commonsware.cwac:pager:0.2.1'
+
+    implementation 'com.google.android.gms:play-services:+'
+
+    //    compile project(':libraries:FancyCoverFlow')
+    implementation project(':libraries:PhotoView')
+    implementation project(':libraries:BonetCalendarView')
+    implementation project(':libraries:ViewPagerIndicator')
+
+    annotationProcessor "org.androidannotations:androidannotations:$AAVersion"
+    implementation "org.androidannotations:androidannotations-api:$AAVersion"
+
+    implementation 'com.j256.ormlite:ormlite-android:4.47'
+    implementation 'com.j256.ormlite:ormlite-core:4.47'
+
+    implementation 'com.google.dagger:dagger:2.0'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.0'
+
+    implementation 'com.google.code.gson:gson:2.2.4'
+    implementation 'org.springframework.android:spring-android-core:1.0.1.RELEASE'
+    implementation 'org.springframework.android:spring-android-rest-template:1.0.1.RELEASE'
+}
+
+/*apt {
+    arguments {
+        //androidManifestFile variant.processResources.manifestFile
+        //resourcePackageName 'au.net.winehound'
+
+        // If you're using Android NBS flavors you should use the following line instead of hard-coded packageName
+        // resourcePackageName android.defaultConfig.packageName
+
+        // You can set optional annotation processing options here, like these commented options:
+        // logLevel 'INFO'
+        // logFile '/var/log/aa.log'
+    }
+
+}*/

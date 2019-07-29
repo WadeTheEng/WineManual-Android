@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/event_view_listitem_image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/featured_event_height"
+        android:src="@drawable/region_placeholder"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:id="@+id/event_view_listitem_textlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:minHeight="?android:attr/listPreferredItemHeight"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/padding_medium"
+        android:paddingBottom="@dimen/padding_medium"
+        android:orientation="vertical"
+        android:background="@color/white_transparent"
+        >
+
+        <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+            android:id="@+id/event_view_listitem_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceListItem"
+            tools:text="Good Beer Week" />
+
+        <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+            android:id="@+id/event_view_listitem_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            tools:text="All the time" />
+
+        <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+            android:id="@+id/event_view_listitem_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            tools:text="Everywhere" />
+
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/padding_xxsmall"
+    android:layout_marginBottom="@dimen/padding_xxsmall"
+    android:background="@color/winehound_cream">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/winery_image"
+        tools:src="@drawable/winery_placeholder"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center_vertical"
+        android:orientation="vertical">
+
+        <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/winery_name_no_image"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/padding_large"
+            android:layout_marginRight="@dimen/padding_large"
+            android:lines="1"
+            android:ellipsize="end"
+
+            tools:text="Winery name" />
+
+        <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/winery_distance_no_image"
+            style="@android:style/TextAppearance.DeviceDefault.Small"
+            android:layout_gravity="left|bottom"
+            android:layout_marginLeft="@dimen/padding_large"
+            tools:text="256 km" />
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/winery_name_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/winery_view_height_normal"
+        android:background="@color/winehound_cream_transparent"
+        android:layout_gravity="left|bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical">
+
+
+            <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/winery_name_image"
+                android:layout_marginLeft="@dimen/padding_large"
+                android:layout_marginRight="@dimen/padding_large"
+                tools:text="Winery name"
+                android:lines="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:id="@+id/winery_distance_image"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/padding_large"
+                    tools:text="256 km"
+                    android:gravity="center_vertical" />
+
+                <au.net.winehound.ui.views.AmenitiesView
+                    android:id="@+id/winery_amenities"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+</FrameLayout>

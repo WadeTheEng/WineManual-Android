@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:exitFadeDuration="@android:integer/config_mediumAnimTime" >
+    <item android:state_pressed="false" android:state_focused="true">
+        <shape android:shape="rectangle">
+            <stroke android:color="@color/winehound_red"
+                android:width="4dp">
+
+            </stroke>
+            <solid android:color="@android:color/transparent"/>
+            <padding
+                android:bottom="@dimen/button_vertical_padding"
+                android:top="@dimen/button_vertical_padding"
+                android:left="@dimen/button_horizontal_padding"
+                android:right="@dimen/button_horizontal_padding"
+                />
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <stroke android:color="@color/winehound_red"
+                android:width="1dp">
+
+            </stroke>
+            <solid android:color="@color/winehound_red_transparent"/>
+            <padding
+                android:bottom="@dimen/button_vertical_padding"
+                android:top="@dimen/button_vertical_padding"
+                android:left="@dimen/button_horizontal_padding"
+                android:right="@dimen/button_horizontal_padding"
+                />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <stroke android:color="@color/winehound_red"
+                android:width="1dp">
+            </stroke>
+            <solid android:color="@android:color/transparent"/>
+            <padding
+                android:bottom="@dimen/button_vertical_padding"
+                android:top="@dimen/button_vertical_padding"
+                android:left="@dimen/button_horizontal_padding"
+                android:right="@dimen/button_horizontal_padding"
+                />
+        </shape>
+        </item>
+</selector>

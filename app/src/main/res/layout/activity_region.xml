@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:animateLayoutChanges="true">
+
+
+        <LinearLayout
+            android:id="@+id/region_whats_on"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/title_height"
+            android:background="?android:attr/selectableItemBackground">
+
+            <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+                android:text="@string/whats_on"
+                android:drawableLeft="@drawable/whats_on_icon"
+                style="@style/TextViewTitle" />
+
+            <ImageView
+                android:id="@+id/region_whats_on_indicator"
+                android:layout_width="@dimen/title_height"
+                android:layout_height="@dimen/title_height"
+                android:src="@drawable/arrow_down"
+                android:scaleType="center" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/region_whats_on_view">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/region_whats_on_progress"
+                android:layout_gravity="center" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/region_whats_on_list"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/no_region_events"
+                android:id="@+id/region_no_events"
+                android:paddingLeft="@dimen/activity_vertical_margin"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/region_about"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/title_height"
+            android:background="?android:attr/selectableItemBackground">
+
+            <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+                android:text="@string/about"
+                android:drawableLeft="@drawable/about_icon"
+                style="@style/TextViewTitle" />
+
+            <ImageView
+                android:id="@+id/region_about_indicator"
+                android:layout_width="@dimen/title_height"
+                android:layout_height="@dimen/title_height"
+                android:src="@drawable/arrow_down"
+                android:scaleType="center" />
+
+        </LinearLayout>
+
+        <WebView
+            android:id="@+id/region_about_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:textColor="@color/winehound_grey" />
+
+        <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+            android:id="@+id/region_about_more"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="@string/more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/winehound_red"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin"
+            android:paddingTop="@dimen/padding_small"
+            android:paddingBottom="@dimen/padding_small"
+            />
+
+        <LinearLayout
+            android:id="@+id/region_wineries"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/title_height"
+            android:background="?android:attr/selectableItemBackground">
+
+            <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+                android:text="@string/wineries"
+                android:drawableLeft="@drawable/wineries_icon_outline"
+                style="@style/TextViewTitle" />
+
+            <ImageView
+                android:layout_width="@dimen/title_height"
+                android:layout_height="@dimen/title_height"
+                android:src="@drawable/arrow_right"
+                android:scaleType="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/region_download_map"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/title_height"
+            android:background="?android:attr/selectableItemBackground">
+
+            <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+                android:text="@string/download_map"
+                android:drawableLeft="@drawable/map_icon_red"
+                style="@style/TextViewTitle" />
+
+            <ImageView
+                android:layout_width="@dimen/title_height"
+                android:layout_height="@dimen/title_height"
+                android:src="@drawable/arrow_right"
+                android:scaleType="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/region_contact"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/title_height"
+            android:background="?android:attr/selectableItemBackground">
+
+            <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+                android:text="Contact"
+                android:drawableLeft="@drawable/contact_icon"
+                style="@style/TextViewTitle" />
+
+            <ImageView
+                android:id="@+id/region_contact_indicator"
+                android:layout_width="@dimen/title_height"
+                android:layout_height="@dimen/title_height"
+                android:src="@drawable/arrow_down"
+                android:scaleType="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/region_contact_view"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+
+            >
+
+            <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+                android:id="@+id/region_driving_directions"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="@string/driving_directions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/winehound_red"
+                android:paddingLeft="@dimen/activity_vertical_margin"
+                android:paddingRight="@dimen/activity_vertical_margin"
+                android:paddingTop="@dimen/padding_small"
+                android:paddingBottom="@dimen/padding_small"
+                />
+
+            <LinearLayout
+                android:id="@+id/region_email"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_vertical_margin"
+                android:paddingRight="@dimen/activity_vertical_margin"
+                android:paddingTop="@dimen/padding_small"
+                android:paddingBottom="@dimen/padding_small">
+
+                <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/padding_small"
+                    android:text="@string/email"/>
+
+                <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+                    android:id="@+id/region_email_text"
+                    tools:text="test@test.com"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/winehound_red"/>
+            </LinearLayout>
+
+            <fragment
+                android:id="@+id/region_map"
+                class="au.net.winehound.ui.fragments.WineriesMapFragment_"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/about_map_height" />
+
+            <LinearLayout
+                android:id="@+id/region_website"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_vertical_margin"
+                android:paddingRight="@dimen/activity_vertical_margin"
+                android:paddingTop="@dimen/padding_small"
+                android:paddingBottom="@dimen/padding_small"
+                android:orientation="vertical">
+
+                <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/padding_small"
+                    android:text="@string/website"/>
+
+                <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+                    android:id="@+id/region_website_text"
+                    tools:text="http://www.blah.com"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/winehound_red"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

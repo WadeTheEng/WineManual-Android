@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"     xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+            <au.net.winehound.ui.views.edmondsans.EdmondSansButton
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/view_website"
+                android:id="@+id/event_website"
+                android:drawableLeft="@drawable/website_icon"
+                android:drawablePadding="@dimen/padding_medium"
+                android:layout_marginRight="@dimen/padding_medium" />
+
+            <au.net.winehound.ui.views.edmondsans.EdmondSansButton
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/add_to_calendar"
+                android:id="@+id/event_add_to_calendar"
+                android:drawableLeft="@drawable/whats_on_icon"
+                android:drawablePadding="@dimen/padding_medium" />
+        </LinearLayout>
+
+        <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+            android:layout_marginTop="@dimen/padding_medium"
+            android:layout_height="wrap_content"
+            android:text="@string/when"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+        <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+            android:id="@+id/event_date"
+            tools:text="2nd March 2014"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+        <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+            android:id="@+id/event_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="12pm - 4pm"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+        <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/where"
+            android:layout_marginTop="@dimen/padding_medium"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+        <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+            android:id="@+id/event_where"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Somewhere over the rainbow"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+        <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+            tools:text="123 some streetS"
+            android:id="@+id/event_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+        <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum eros nec quam pretium imperdiet. Vestibulum mattis pellentesque fermentum. Morbi gravida condimentum libero et tempor. Morbi non sagittis libero. Duis vehicula libero neque. Vestibulum nibh ante, tempus non suscipit commodo, dictum ut nisi. Praesent et dignissim mi."
+            android:background="@color/winehound_cream"
+            android:layout_marginTop="@dimen/padding_medium"
+            android:paddingTop="@dimen/padding_medium"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:id="@+id/event_descrption" />
+
+        <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Free!"
+            android:background="@color/winehound_cream"
+            android:paddingTop="@dimen/padding_medium"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:id="@+id/event_cost" />
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/winehound_cream"
+            android:layout_marginBottom="@dimen/padding_medium"
+            android:paddingBottom="@dimen/padding_medium"
+            android:paddingTop="@dimen/padding_medium"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
+            <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/telephone" />
+
+            <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="1234-5678"
+                android:paddingLeft="@dimen/padding_small"
+                android:paddingRight="@dimen/padding_small"
+                android:textColor="@color/winehound_red"
+                android:background="?android:attr/selectableItemBackground"
+                android:id="@+id/event_telephone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

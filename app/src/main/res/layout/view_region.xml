@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="@dimen/region_view_height"
+    android:layout_marginTop="@dimen/padding_xxsmall"
+    android:layout_marginBottom="@dimen/padding_xxsmall">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/region_image"
+        tools:src="@drawable/region_placeholder"
+        android:scaleType="centerCrop"
+        android:visibility="visible"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/black_gradient_bottom"/>
+
+    <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/region_name"
+        android:gravity="center_vertical"
+        style="@android:style/TextAppearance.DeviceDefault.Large.Inverse"
+        android:layout_marginLeft="@dimen/padding_large"
+        tools:text="Region name"/>
+
+
+    <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/region_distance"
+        android:layout_gravity="left|bottom"
+        style="@android:style/TextAppearance.DeviceDefault.Small.Inverse"
+        android:layout_marginBottom="@dimen/padding_medium"
+        android:layout_marginLeft="@dimen/padding_large"
+        tools:text="256 km"
+        android:textColor="@color/white"/>
+
+
+</FrameLayout>

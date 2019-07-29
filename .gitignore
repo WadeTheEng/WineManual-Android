@@ -1,0 +1,12 @@
+.gradle
+/local.properties
+/.idea/workspace.xml
+.DS_Store
+
+app/build/*
+libraries/PhotoView/build/*
+libraries/ViewPagerIndicator/build/*
+libraries/BonetCalendarView/build/*
+libraries/BonetCalendarView/build/libs/BonetCalendarView.aar
+
+libraries/PhotoView/build/libs/PhotoView.aar

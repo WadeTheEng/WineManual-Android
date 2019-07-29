@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/header_image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_image_height"
+        tools:src="@drawable/winery_placeholder"
+        android:scaleType="centerCrop" />
+
+    <View
+        android:id="@+id/header_num_images_gradient"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_image_gradient_top_height"
+        android:background="@drawable/black_gradient_top"
+        android:layout_gravity="top"
+        android:visibility="gone"/>
+
+    <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/header_num_images"
+        android:layout_gravity="top|right"
+        style="@android:style/TextAppearance.DeviceDefault.Small.Inverse"
+        android:layout_marginRight="@dimen/padding_medium"
+        android:layout_marginTop="@dimen/padding_medium"
+        tools:text="1 of 3"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_image_gradient_bottom_height"
+        android:background="@drawable/black_gradient_bottom"
+        android:layout_gravity="bottom"/>
+
+    <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/header_name"
+        android:layout_gravity="bottom"
+        style="@android:style/TextAppearance.DeviceDefault.Large.Inverse"
+        android:layout_marginLeft="@dimen/padding_large"
+        android:layout_marginBottom="@dimen/padding_large"
+        android:layout_marginRight="48dp"
+        tools:text="Region name"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/header_favourite_button"
+        android:layout_gravity="right|bottom"
+        android:src="@drawable/favourite_icon_white_norm"
+        android:padding="@dimen/padding_large"
+        android:background="?android:attr/selectableItemBackground"
+        />
+
+</FrameLayout>

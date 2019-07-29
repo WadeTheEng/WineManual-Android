@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:showDividers="middle"
+            android:divider="?android:attr/listDivider"
+            android:background="@color/winehound_grey"
+            >
+
+            <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/listPreferredItemHeight"
+                android:text="@string/home"
+                android:id="@+id/drawer_home"
+                android:gravity="center_vertical"
+                android:drawableLeft="@drawable/home_icon"
+                android:drawablePadding="@dimen/padding_small"
+                android:paddingLeft="?android:attr/listPreferredItemPaddingLeft"
+                android:paddingRight="?android:attr/listPreferredItemPaddingRight"
+                style="?android:attr/textAppearanceLargeInverse"
+                android:background="?android:attr/selectableItemBackground"
+                />
+
+            <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/listPreferredItemHeight"
+                android:text="@string/trade_events"
+                android:id="@+id/drawer_trade_events"
+                android:gravity="center_vertical"
+                android:drawableLeft="@drawable/events_icon_white"
+                android:drawablePadding="@dimen/padding_small"
+                android:paddingLeft="?android:attr/listPreferredItemPaddingLeft"
+                android:paddingRight="?android:attr/listPreferredItemPaddingRight"
+                style="?android:attr/textAppearanceLargeInverse"
+                android:background="?android:attr/selectableItemBackground"
+                />
+
+            <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/listPreferredItemHeight"
+                android:text="@string/about_winehound"
+                android:id="@+id/drawer_about"
+                android:gravity="center_vertical"
+                android:drawableLeft="@drawable/doghead_white_icon"
+                android:drawablePadding="@dimen/padding_small"
+                android:paddingLeft="?android:attr/listPreferredItemPaddingLeft"
+                android:paddingRight="?android:attr/listPreferredItemPaddingRight"
+                style="?android:attr/textAppearanceLargeInverse"
+                android:background="?android:attr/selectableItemBackground"
+                />
+
+            <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/listPreferredItemHeight"
+                android:text="@string/settings"
+                android:id="@+id/drawer_settings"
+                android:gravity="center_vertical"
+                android:drawableLeft="@drawable/settings_icon"
+                android:drawablePadding="@dimen/padding_small"
+                android:paddingLeft="?android:attr/listPreferredItemPaddingLeft"
+                android:paddingRight="?android:attr/listPreferredItemPaddingRight"
+                style="?android:attr/textAppearanceLargeInverse"
+                android:background="?android:attr/selectableItemBackground"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:src="@drawable/doghead_lrg"
+                android:layout_margin="@dimen/padding_medium"
+                android:layout_gravity="right|bottom"
+                android:layout_weight="1"
+                android:scaleType="fitEnd" />
+
+        </LinearLayout>
+
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/drawer_shadow" />
+
+</LinearLayout>

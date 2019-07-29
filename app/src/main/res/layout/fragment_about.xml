@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:scrollbarStyle="outsideOverlay"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/padding_xlarge"
+    android:paddingRight="@dimen/padding_xlarge"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        §<au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/about_text"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal" />
+
+        <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/terms_of_use"
+            android:id="@+id/about_terms"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/padding_medium"
+            android:textColor="@color/winehound_red"
+            android:background="?android:attr/selectableItemBackground"/>
+
+        <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/privacy_policy"
+            android:id="@+id/about_privacy"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/winehound_red"
+            android:background="?android:attr/selectableItemBackground"/>
+
+        <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            tools:text="Version 1.0"
+            android:id="@+id/about_version"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/about_paperclound"
+            android:src="@drawable/papercloud_logo"
+            android:scaleType="fitEnd"
+            android:layout_gravity="center_horizontal"
+            />
+
+    </LinearLayout>
+
+</ScrollView>

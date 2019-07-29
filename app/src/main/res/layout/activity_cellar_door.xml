@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:scrollbarStyle="outsideOverlay"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/padding_xlarge"
+    android:paddingRight="@dimen/padding_xlarge"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+        android:id="@+id/cellar_door_textview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:text="This is a test"/>
+
+    <au.net.winehound.ui.views.CellarDoorTimesView
+        android:id="@+id/cellar_door_open_times"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</ScrollView>

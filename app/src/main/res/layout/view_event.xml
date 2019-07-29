@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="@dimen/event_view_width"
+    android:layout_height="@dimen/event_view_height"
+    android:layout_margin="@dimen/padding_medium"
+    android:background="@color/winehound_cream"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <ImageView
+        android:id="@+id/event_view_image"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scaleType="centerCrop"
+
+        />
+
+    <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+        android:id="@+id/event_view_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/winehound_red"
+        android:lines="2"
+        android:ellipsize="end"
+        tools:text="Text event name"
+        android:layout_marginLeft="@dimen/padding_xsmall"
+        android:layout_marginRight="@dimen/padding_xsmall"/>
+
+    <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+        android:id="@+id/event_view_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="4 OCT - 24 NOV"
+        android:layout_marginLeft="@dimen/padding_xsmall"
+        android:layout_marginRight="@dimen/padding_xsmall"
+        android:layout_marginBottom="@dimen/padding_xsmall"/>
+
+</LinearLayout>

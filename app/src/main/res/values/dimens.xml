@@ -1,0 +1,47 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <dimen name="button_font_size">15sp</dimen>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="padding_xxsmall">2dp</dimen>
+    <dimen name="padding_xsmall">4dp</dimen>
+    <dimen name="padding_small">6dp</dimen>
+    <dimen name="padding_medium">8dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+    <dimen name="padding_xlarge">32dp</dimen>
+
+    <dimen name="button_horizontal_padding">16dp</dimen>
+    <dimen name="button_vertical_padding">6dp</dimen>
+
+    <dimen name="drawer_width">240dp</dimen>
+
+    <dimen name="region_view_height">88dp</dimen>
+
+    <dimen name="winery_view_height_large">240dp</dimen>
+    <dimen name="winery_view_height_medium">192dp</dimen>
+    <dimen name="winery_view_height_normal">72dp</dimen>
+
+    <dimen name="header_image_height">240dp</dimen>
+    <dimen name="header_image_gradient_bottom_height">72dp</dimen>
+    <dimen name="header_image_gradient_top_height">40dp</dimen>
+
+    <dimen name="title_height">48dp</dimen>
+    
+    <dimen name="wine_height">128dp</dimen>
+    <dimen name="coverflow_wine_height">240dp</dimen>
+    <dimen name="coverflow_wine_width">120dp</dimen>
+
+    <dimen name="gold_logo_pin_border">4dp</dimen>
+
+    <dimen name="about_map_height">200dp</dimen>
+    <dimen name="events_calender_height">300dp</dimen>
+
+
+    <dimen name="event_view_width">124dp</dimen>
+    <dimen name="event_view_height">170dp</dimen>
+
+    <dimen name="featured_event_height">144dp</dimen>
+</resources>

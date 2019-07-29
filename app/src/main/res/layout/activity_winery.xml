@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:animateLayoutChanges="true">
+
+        <LinearLayout
+            android:id="@+id/winery_about"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/title_height"
+            android:background="?android:attr/selectableItemBackground">
+
+            <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+                android:text="@string/about"
+                android:drawableLeft="@drawable/about_icon"
+                style="@style/TextViewTitle" />
+
+            <ImageView
+                android:id="@+id/winery_about_indicator"
+                android:layout_width="@dimen/title_height"
+                android:layout_height="@dimen/title_height"
+                android:src="@drawable/arrow_down"
+                android:scaleType="center" />
+
+        </LinearLayout>
+
+        <WebView
+            android:id="@+id/winery_about_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:textColor="@color/winehound_grey" />
+
+        <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+            android:id="@+id/winery_about_more"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="@string/more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/winehound_red"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin"
+            android:paddingTop="@dimen/padding_small"
+            android:paddingBottom="@dimen/padding_small" />
+
+
+        <LinearLayout
+            android:id="@+id/winery_cellar_door"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/title_height"
+            android:background="?android:attr/selectableItemBackground">
+
+            <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+                android:text="@string/cellar_door"
+                android:drawableLeft="@drawable/cellar_door_icon"
+                style="@style/TextViewTitle" />
+
+            <ImageView
+                android:layout_width="@dimen/title_height"
+                android:layout_height="@dimen/title_height"
+                android:src="@drawable/arrow_down"
+                android:scaleType="center"
+                android:id="@+id/winery_cellar_door_indicator" />
+
+        </LinearLayout>
+
+        <WebView
+            android:id="@+id/winery_cellar_door_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_vertical_margin"
+            android:textColor="@color/winehound_grey" />
+
+
+        <au.net.winehound.ui.views.CellarDoorTimesView
+            android:id="@+id/winery_cellar_door_times"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin"
+            android:paddingTop="@dimen/padding_small"
+            android:paddingBottom="@dimen/padding_small" />
+
+        <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+            android:id="@+id/winery_cellar_door_more"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="@string/more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/winehound_red"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin"
+            android:paddingTop="@dimen/padding_small"
+            android:paddingBottom="@dimen/padding_small" />
+
+        <LinearLayout
+            android:id="@+id/winery_wines"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/title_height"
+            android:background="?android:attr/selectableItemBackground">
+
+            <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+                android:text="@string/wines"
+                android:drawableLeft="@drawable/wine_icon"
+                style="@style/TextViewTitle" />
+
+            <ImageView
+                android:id="@+id/winery_wine_indicator"
+                android:layout_width="@dimen/title_height"
+                android:layout_height="@dimen/title_height"
+                android:src="@drawable/arrow_down"
+                android:scaleType="center" />
+
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/winery_wines_view">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/winery_wines_progress"
+                android:layout_gravity="center" />
+
+            <LinearLayout
+                android:id="@+id/winery_wines_list"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:divider="?android:attr/listDivider"
+                android:showDividers="middle"></LinearLayout>
+
+            <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_wines"
+                android:id="@+id/winery_no_wines"
+                android:visibility="gone"
+                android:layout_gravity="left|top"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/winery_whats_on"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/title_height"
+            android:background="?android:attr/selectableItemBackground">
+
+            <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+                android:text="@string/whats_on"
+                android:drawableLeft="@drawable/whats_on_icon"
+                style="@style/TextViewTitle" />
+
+            <ImageView
+                android:id="@+id/winery_whats_on_indicator"
+                android:layout_width="@dimen/title_height"
+                android:layout_height="@dimen/title_height"
+                android:src="@drawable/arrow_down"
+                android:scaleType="center" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/winery_whats_on_view">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/winery_whats_on_progress"
+                android:layout_gravity="center" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/winery_whats_on_list"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/no_winery_events"
+                android:id="@+id/winery_no_events"
+                android:paddingLeft="@dimen/activity_vertical_margin"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/winery_contact"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/title_height"
+            android:background="?android:attr/selectableItemBackground">
+
+            <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+                android:text="Contact"
+                android:drawableLeft="@drawable/contact_icon"
+                style="@style/TextViewTitle" />
+
+            <ImageView
+                android:id="@+id/winery_contact_indicator"
+                android:layout_width="@dimen/title_height"
+                android:layout_height="@dimen/title_height"
+                android:src="@drawable/arrow_down"
+                android:scaleType="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/winery_contact_view"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+
+            >
+
+            <fragment
+                android:id="@+id/winery_map"
+                class="au.net.winehound.ui.fragments.WineriesMapFragment_"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/about_map_height" />
+
+            <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+                android:id="@+id/winery_address"
+                tools:text="123 some road\nA fake address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_vertical_margin"
+                android:paddingRight="@dimen/activity_vertical_margin"
+                android:paddingTop="@dimen/padding_small"
+                android:paddingBottom="@dimen/padding_small" />
+
+            <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+                android:id="@+id/winery_driving_directions"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="@string/driving_directions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/winehound_red"
+                android:paddingLeft="@dimen/activity_vertical_margin"
+                android:paddingRight="@dimen/activity_vertical_margin"
+                android:paddingTop="@dimen/padding_small"
+                android:paddingBottom="@dimen/padding_small" />
+
+
+            <LinearLayout
+                android:id="@+id/winery_phone"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_vertical_margin"
+                android:paddingRight="@dimen/activity_vertical_margin"
+                android:paddingTop="@dimen/padding_small"
+                android:paddingBottom="@dimen/padding_small">
+
+                <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/padding_small"
+                    android:text="@string/phone" />
+
+                <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+                    android:id="@+id/winery_phone_text"
+                    tools:text="1234-5535"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/winehound_red" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/winery_email"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_vertical_margin"
+                android:paddingRight="@dimen/activity_vertical_margin"
+                android:paddingTop="@dimen/padding_small"
+                android:paddingBottom="@dimen/padding_small">
+
+                <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/padding_small"
+                    android:text="@string/email" />
+
+                <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+                    android:id="@+id/winery_email_text"
+                    tools:text="test@test.com"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/winehound_red" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/winery_website"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_vertical_margin"
+                android:paddingRight="@dimen/activity_vertical_margin"
+                android:paddingTop="@dimen/padding_small"
+                android:paddingBottom="@dimen/padding_small">
+
+                <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/padding_small"
+                    android:text="@string/website" />
+
+                <au.net.winehound.ui.views.edmondsans.EdmondSansTextView
+                    android:id="@+id/winery_website_text"
+                    tools:text="http://www.blah.com"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/winehound_red" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
